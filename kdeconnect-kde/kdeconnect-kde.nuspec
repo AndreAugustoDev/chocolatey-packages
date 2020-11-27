@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kdeconnect-kde</id>
-    <version>1.4</version>
+    <version>1.4.20201127</version>
     <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/kdeconnect-kde</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>KDE Connect (Install)</title>
