@@ -10,7 +10,7 @@
     <projectUrl>https://kdeconnect.kde.org/</projectUrl>
     <iconUrl>https://kdeconnect.kde.org/assets/img/KDE_Logo.png</iconUrl>
     <copyright>KDE® and the K Desktop Environment® logo are registered trademarks of KDE e.V.</copyright>
-    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <licenseUrl>https://invent.kde.org/network/kdeconnect-kde/-/tree/master/LICENSES</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://invent.kde.org/network/kdeconnect-kde</projectSourceUrl>
     <docsUrl>https://community.kde.org/KDEConnect</docsUrl>
