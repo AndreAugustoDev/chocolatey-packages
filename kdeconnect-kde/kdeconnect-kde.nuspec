@@ -3,7 +3,7 @@
   <metadata>
     <id>kdeconnect-kde</id>
     <version>1.4</version>
-    <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/kdeconnect-kde</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/kdeconnect-kde</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>KDE Connect (Install)</title>
     <authors>KDE e.V.</authors>
