@@ -8,4 +8,5 @@
 Este repositório possui o código fonte dos pacotes nuget para [Chocolatey](https://chocolatey.org/) feitos por mim.
 
 ## Pacotes disponíveis
-- <img src="https://kdeconnect.kde.org/assets/img/KDE_Logo.png" width="25px" />KDE Connect 1.4 (Windows x64)
+- <img src="https://kdeconnect.kde.org/assets/img/KDE_Logo.png" width="25px" />[KDE Connect 1.4 (Windows x64)](https://invent.kde.org/network/kdeconnect-kde)
+- <img src="https://github.com/Diolinux/PhotoGIMP/raw/master/.icons/photogimp.png" width="25px" />[PhotoGIMP 1.0.2020](https://github.com/Diolinux/PhotoGIMP)
