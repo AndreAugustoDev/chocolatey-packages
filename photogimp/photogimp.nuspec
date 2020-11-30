@@ -3,7 +3,7 @@
   <metadata>
     <id>photogimp</id>
     <version>1.0.2020</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/photogimp</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>PhotoGIMP</title>
     <authors>Diolinux</authors>
