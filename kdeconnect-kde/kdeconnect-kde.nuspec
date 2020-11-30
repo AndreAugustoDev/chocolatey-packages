@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kdeconnect-kde</id>
-    <version>1.4</version>
+    <version>1.4.422</version>
     <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/kdeconnect-kde</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>KDE Connect (Install)</title>
@@ -18,10 +18,7 @@
     <tags>kde kdeconnect windows communications tools</tags>
 	<releaseNotes>https://kde.org/announcements/fulllog_releases-20.08.3/?version=20.08.3#kdeconnect-kde</releaseNotes>
 	<summary>KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).</summary>
-    <description>
-# KDE Connect - desktop app
-
-KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).
+    <description><![CDATA[KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).
 
 ## (Some) Features
 - **Shared clipboard**: copy and paste between your phone and your computer (or any other device).
@@ -85,8 +82,7 @@ Please know that all translations for all KDE apps are handled by the [localizat
 [GNU GPL v2](https://www.gnu.org/licenses/gpl-2.0.html) and [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html)
 
 If you are reading this from Github, you should know that this is just a mirror of the [KDE Project repo](https://invent.kde.org/network/kdeconnect-kde).
-This package does *not* support *32*-bit architecture.
-</description>
+]]></description>
     </metadata>
   <files>
     <file src="tools\**" target="tools" />
