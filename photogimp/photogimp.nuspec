@@ -8,8 +8,7 @@
     <title>PhotoGIMP</title>
     <authors>Diolinux</authors>
     <projectUrl>https://github.com/Diolinux/PhotoGIMP</projectUrl>
-    <iconUrl>https://github.com/Diolinux/PhotoGIMP/raw/master/.icons/photogimp.png</iconUrl>
-    <projectSourceUrl>https://github.com/Diolinux/PhotoGIMP/tree/master</projectSourceUrl>
+    <iconUrl>https://github.com/Diolinux/PhotoGIMP/raw/master/.icons/photogimp.pnghttps://raw.githubusercontent.com/Diolinux/PhotoGIMP/master/.icons/photogimp.pngttps://github.com/Diolinux/PhotoGIMP/tree/master</projectSourceUrl>
     <docsUrl>https://diolinux.com.br/2020/06/photogimp-2020.html</docsUrl>
     <bugTrackerUrl>https://github.com/Diolinux/PhotoGIMP/issues</bugTrackerUrl>
 	<licenseUrl>https://opensource.org/licenses/CDDL-1.0</licenseUrl>
