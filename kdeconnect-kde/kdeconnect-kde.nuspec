@@ -30,22 +30,6 @@
 
 All this is done completely wirelessly, utilising TLS encryption.
 
-## Supported platforms
-- Computers running Linux with Plasma 5, Gnome 3, Elementary OS... any distro with Qt5 support given a little work :)
-- Android, by installing the KDE Connect app from the [Play Store](https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp) or [F-Droid](https://f-droid.org/repository/browse/?fdid=org.kde.kdeconnect_tp).
-
-## How to install
-These instructions explain how to install KDE Connect on your computer. You will also need to install it on your Android device and pair them together in the app before using this application. The Android app repository can be found [here](https://invent.kde.org/network/kdeconnect-android)
-
-### On Linux
-Look in your distribution repo for a package called `kdeconnect-kde`, `kdeconnect-plasma`, or just `kdeconnect`. If it's not there and you know how to build software from sources, you just found the repo :), instructions are [here](https://community.kde.org/KDEConnect#Building_KDE_Connect_.28Desktop.29)
-
-### On Mac or Windows
-Platforms other than Linux are not officially supported, as there has yet to be an official release of KDE Connect for MacOS or Windows. However, most of the features have already been ported to windows so you can compile KDE Connect for Windows using [Craft](https://community.kde.org/Craft). It hasn't yet been completely tested on MacOS, contributions and feedback are welcome!
-
-### On BSD
-It should work, but no promises :)
-
 ## How does it work?
 KDE Connect consists of a UI-agnostic "core" library that exposes a series of DBus interfaces, and several UI components that consume these DBus interfaces. This way, new UI components can be added to integrate better with specific platforms or desktops, without having to reimplement the protocol or any of the internals. The core KDE Connect library is also divided into 4 big blocks:
 
@@ -53,24 +37,6 @@ KDE Connect consists of a UI-agnostic "core" library that exposes a series of DB
 - **Devices**: Represent a remote device, abstracting the specific Link that is being used to reach it.
 - **NetworkPackets**: JSON-serializable and self-contained pieces of information to be sent by the plugins between devices.
 - **Plugins**: Independent pieces of code that implement a specific feature. Plugins will use NetworkPackets to exchange information through the network with other Plugins on a remote Device.
-
-The basic structure of a NetworkPacket is the following:
-
-```
-{
-  "id": 123456789,
-  "type": "com.example.myplugin",
-  "body": {  },
-  "version": 5
-}
-```
-
-The content of the `"body"` section is defined by each Plugin. Hence, only the emitter and receiver plugins of a given packet type need agree on the contents of the body.
-
-NetworkPackets can also have binary data attached that can't be serialized to JSON. In this case, two new fields will be added:
-
-`"payloadSize"`: The size of the file, or -1 if it is a stream without known size.
-`"payloadTransferInfo"`: Another JSON object where the specific Link can add information so the Link in the remote end can establish a connection and receive the payload (eg: IP and port in a local network). It's up to the Link implementation to decide how to use this field.
 
 ## Contributing
 
@@ -83,6 +49,9 @@ Please know that all translations for all KDE apps are handled by the [localizat
 
 If you are reading this from Github, you should know that this is just a mirror of the [KDE Project repo](https://invent.kde.org/network/kdeconnect-kde).
 ]]></description>
+	<dependencies>
+	  <dependency id="chocolatey-core.extension" version="1.3.3" />
+	</dependencies>
     </metadata>
   <files>
     <file src="tools\**" target="tools" />
