@@ -10,7 +10,7 @@
 
 # <img src="chocolatey.svg" width="50px" /> Chocolatey Packages
 
-Este repositório possui o código fonte dos pacotes nuget para [Chocolatey][chocolatey] feitos por [mim][profile].
+Este repositório possui o código fonte dos pacotes nuget para [Chocolatey][chocolatey] feitos por [mim][profile].  
 This repository has the source code of the nuget packages for [Chocolatey][chocolatey] made by [me][profile].
 
 ## Pacotes disponíveis | Available packages
