@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>gimp-data-extras</id>
+		<version>2.0.4</version>
+		<packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/gimp-data-extras</packageSourceUrl>
+		<owners>André Augusto</owners>
+		<title>gimp-data-extras</title>
+		<authors>The GIMP Team</authors>
+		<projectUrl>https://www.gimp.org/</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/AndreAugustoAAQ/chocolatey-packages/main/gimp-data-extras/gimp-icon.svg</iconUrl>
+		<licenseUrl>https://www.gimp.org/about/</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<projectSourceUrl>https://git.gnome.org/browse/gimp</projectSourceUrl>
+		<docsUrl>https://www.gimp.org/docs/</docsUrl>
+		<mailingListUrl>https://www.gimp.org/mail_lists.html</mailingListUrl>
+		<bugTrackerUrl>https://www.gimp.org/bugs/</bugTrackerUrl>
+		<tags>gimp-data-extras gimp design publishing editor images graphics photo art png jpg gif admin foss cross-platform</tags>
+		<summary>gimp-data-extras</summary>
+		<description>This is a collection of additional data files for [GIMP 2.10](https://www.gimp.org/). It adds a couple of brushes and patterns to the set of files that are already shipped with the GIMP tarball. It also contains scripts that have been removed during v2.10 development cycle.</description>
+		<releaseNotes>https://www.gimp.org/release-notes/</releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools"/>
+	</files>
+</package>
