@@ -8,7 +8,7 @@
     <title>PhotoGIMP</title>
     <authors>Diolinux</authors>
     <projectUrl>https://github.com/Diolinux/PhotoGIMP</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Diolinux/PhotoGIMP/master/.icons/photogimp.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AndreAugustoAAQ/chocolatey-packages@main/photogimp/photogimp.png</iconUrl>
     <projectSourceUrl>https://github.com/Diolinux/PhotoGIMP/tree/master</projectSourceUrl>
     <docsUrl>https://diolinux.com.br/2020/06/photogimp-2020.html</docsUrl>
     <bugTrackerUrl>https://github.com/Diolinux/PhotoGIMP/issues</bugTrackerUrl>

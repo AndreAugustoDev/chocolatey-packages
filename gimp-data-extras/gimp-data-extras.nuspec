@@ -9,7 +9,7 @@
 		<title>GIMP data extras</title>
 		<authors>The GIMP Team</authors>
 		<projectUrl>https://www.gimp.org/</projectUrl>
-		<iconUrl>https://raw.githubusercontent.com/AndreAugustoAAQ/chocolatey-packages/main/gimp-data-extras/gimp-icon.svg</iconUrl>
+		<iconUrl>https://cdn.jsdelivr.net/gh/AndreAugustoAAQ/chocolatey-packages@main/gimp-data-extras/gimp.svg</iconUrl>
 		<licenseUrl>https://www.gimp.org/about/</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectSourceUrl>https://git.gnome.org/browse/gimp</projectSourceUrl>
