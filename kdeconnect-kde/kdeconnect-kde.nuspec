@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kdeconnect-kde</id>
-    <version>1.4.424</version>
+    <version>1.4.490</version>
     <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/kdeconnect-kde</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>KDE Connect</title>
@@ -49,9 +49,6 @@ Please know that all translations for all KDE apps are handled by the [localizat
 
 If you are reading this from Github, you should know that this is just a mirror of the [KDE Project repo](https://invent.kde.org/network/kdeconnect-kde).
 ]]></description>
-	<dependencies>
-	  <dependency id="chocolatey-core.extension" version="1.3.3" />
-	</dependencies>
     </metadata>
   <files>
     <file src="tools\**" target="tools" />

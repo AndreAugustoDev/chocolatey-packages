@@ -13,6 +13,7 @@ function global:au_GetLatest {
     @{
         URL64        	= 'https://binary-factory.kde.org/view/Windows%2064-bit/job/kdeconnect-kde_Release_win64/'+ $build64 +'/artifact/kdeconnect-kde-' + $version + '-' + $build64 + '-windows-msvc2019_64-cl.exe'
         Version      	= $version + '.' + $build64
+		Checksum64		= ''
 		ChecksumType64	= 'sha256'
     }
 }
@@ -27,7 +28,7 @@ function global:au_SearchReplace {
 }
 
 try {
-    update -ChecksumFor 64
+    update -ChecksumFor none
 } catch {
     $ignore = 'Not Found'
     if ($_ -match $ignore) { Write-Host $ignore; 'ignore' }  else { throw $_ }
