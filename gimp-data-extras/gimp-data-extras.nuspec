@@ -23,7 +23,6 @@
 		It also contains scripts that have been removed during v2.10 development cycle.</description>
 		<releaseNotes>https://www.gimp.org/release-notes/</releaseNotes>
 		<dependencies>
-			<dependency id="chocolatey-core.extension" version="1.3.3" />
 			<dependency id="gimp" />
 		</dependencies>
 	</metadata>
