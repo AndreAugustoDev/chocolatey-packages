@@ -41,8 +41,7 @@ https://github.com/Diolinux/PhotoGIMP/blob/master/fonts.txt
 	</description>
     <releaseNotes>https://diolinux.com.br/2020/06/photogimp-2020.html</releaseNotes>
 	<dependencies>
-	  <dependency id="chocolatey-core.extension" version="1.3.3" />
-	  <dependency id="gimp" />
+	  <dependency id="gimp" version="2.10.0"/>
 	</dependencies>
   </metadata>
   <files>
