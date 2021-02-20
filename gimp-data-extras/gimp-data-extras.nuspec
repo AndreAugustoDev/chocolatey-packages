@@ -23,7 +23,7 @@
 		It also contains scripts that have been removed during v2.10 development cycle.</description>
 		<releaseNotes>https://www.gimp.org/release-notes/</releaseNotes>
 		<dependencies>
-			<dependency id="gimp" />
+			<dependency id="gimp" version="2.10.0"/>
 		</dependencies>
 	</metadata>
 	<files>
