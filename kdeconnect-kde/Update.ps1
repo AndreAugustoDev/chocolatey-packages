@@ -1,4 +1,4 @@
-import-module au
+Import-Module au
 
 $releases = 'https://github.com/KDE/kdeconnect-kde/releases'
 $artifacts64 = 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/'
@@ -26,4 +26,9 @@ function global:au_GetLatest {
 		}
 }
 
-update -ChecksumFor 64
+try {
+    update -ChecksumFor 64
+} catch {
+    $ignore = 'Not Found'
+   if ($_ -match $ignore) { Write-Host $ignore; 'ignore' }  else { throw $_ }
+}
