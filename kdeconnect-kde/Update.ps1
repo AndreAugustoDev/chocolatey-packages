@@ -3,6 +3,10 @@ Import-Module au
 $releases = 'https://invent.kde.org/network/kdeconnect-kde/-/tags'
 $artifacts64 = 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/'
 
+function global:au_BeforeUpdate() {
+     $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+  }
+
 function global:au_SearchReplace {
         @{
         ".\tools\chocolateyInstall.ps1" = @{
@@ -26,12 +30,8 @@ function global:au_GetLatest {
     }
 }
 
-function global:au_BeforeUpdate {
-    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
-}
-
 try {
-    update -ChecksumFor none
+    update -ChecksumFor 64
 } catch {
     $ignore = 'Not Found'
    if ($_ -match $ignore) { Write-Host $ignore; 'ignore' }  else { throw $_ }
