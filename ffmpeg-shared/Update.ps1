@@ -1,26 +1,25 @@
 Import-Module au
 
-$releases = 'https://www.gyan.dev/ffmpeg/builds'
+$release  = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z.ver'
+$checksum = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z.sha256'
 
 function global:au_GetLatest   {
-  $download_page = Invoke-WebRequest -Uri "$releases/packages/" -UseBasicParsing -Header @{ Referer = $releases }
-  $re			 = 'full_build-shared\.7z$'
-  $url64		 = $download_page.links | ? href -match $re | Select -Expand href -First 1
-  $rv			 = ($url64 -split '/ffmpeg-')[-1] -split '-' | Select -SkipLast 2
-  $version		 = $rv[0] + '.' + ($rv[1,2,3] -join '')
-  $dlversion	 = $rv -join '-'
+  $get_version = Invoke-WebRequest -Uri "$release" -UseBasicParsing -Header @{ Referer = $release }
+  $get_sha256  = Invoke-WebRequest -Uri "$checksum" -UseBasicParsing -Header @{ Referer = $checksum }
+  $version     = $get_version.ToString()
+  $sha256      = $get_sha256.ToString()
   @{
-    URL64 			= "https://github.com/GyanD/codexffmpeg/releases/download/${dlversion}/ffmpeg-${dlversion}-full_build-shared.7z"
+    URL64 			= "https://github.com/GyanD/codexffmpeg/releases/download/${version}/ffmpeg-${version}-full_build-shared.7z"
     Version 		= $version
+    Checksum64      = $sha256
 	ChecksumType64	= 'sha256'
-	DownloadVersion	= $dlversion
   }
 }
 
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
-			"(^[$]version\s*=\s*)('.*')"      = "`$1'$($Latest.DownloadVersion)'"
+			"(^[$]version\s*=\s*)('.*')"      = "`$1'$($Latest.Version)'"
 			"(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
 			"(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
 		}

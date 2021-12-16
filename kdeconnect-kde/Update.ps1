@@ -1,6 +1,6 @@
 Import-Module au
 
-$releases = 'https://github.com/KDE/kdeconnect-kde/releases'
+$releases = 'https://invent.kde.org/network/kdeconnect-kde/-/tags'
 $artifacts64 = 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/'
 
 
