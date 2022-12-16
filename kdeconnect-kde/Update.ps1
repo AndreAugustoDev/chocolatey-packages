@@ -4,7 +4,9 @@ $releases = 'https://invent.kde.org/network/kdeconnect-kde/-/tags'
 $artifacts64 = 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/'
 
 function global:au_BeforeUpdate() {
-     $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+    $wc = [System.Net.WebClient]::new()
+    $RemoteFileHash = Get-FileHash -InputStream ($wc.OpenRead($Latest.URL64))
+    $Latest.Checksum64 = $RemoteFileHash.hash
   }
 
 function global:au_SearchReplace {
@@ -25,7 +27,7 @@ function global:au_GetLatest {
 	$build64           = ($artifacts64_page.links | ? href -match '.exe$' | select -First 1 -expand href) -split '-' | select -First 1 -Skip 3
 
     return @{
-		URL64        	= 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/'+ $build64 +'/artifact/kdeconnect-kde-' + $version + '-' + $build64 + '-windows-msvc2019_64-cl.exe';
+		URL64        	= 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-' + $version + '-' + $build64 + '-windows-cl-msvc2019-x86_64.exe';
         Version      	= $version + '.' + $build64;
     }
 }

@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version	= '4.4.1'
+$version	= '5.1.2'
 $dir 		= "ffmpeg-${version}-full_build-shared"
-$url64      = 'https://github.com/GyanD/codexffmpeg/releases/download/4.4.1/ffmpeg-4.4.1-full_build-shared.7z'
+$url64      = 'https://github.com/GyanD/codexffmpeg/releases/download/5.1.2/ffmpeg-5.1.2-full_build-shared.7z'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName

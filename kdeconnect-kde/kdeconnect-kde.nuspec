@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kdeconnect-kde</id>
-    <version>1.4.507</version>
+    <version>22.12.0.1189</version>
     <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/kdeconnect-kde</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>KDE Connect</title>
@@ -14,9 +14,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://invent.kde.org/network/kdeconnect-kde</projectSourceUrl>
     <docsUrl>https://community.kde.org/KDEConnect</docsUrl>
-    <bugTrackerUrl>https://invent.kde.org/network/kdeconnect-kde/-/merge_requests</bugTrackerUrl>
+    <bugTrackerUrl>https://bugs.kde.org/buglist.cgi?product=kdeconnect</bugTrackerUrl>
     <tags>kde kdeconnect windows communications tools</tags>
-	<releaseNotes>https://kde.org/announcements/fulllog_releases-20.08.3/?version=20.08.3#kdeconnect-kde</releaseNotes>
+	<releaseNotes>https://kde.org/announcements/gear/22.12.0/</releaseNotes>
 	<summary>KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).</summary>
     <description><![CDATA[KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).
 

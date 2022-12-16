@@ -1,3 +1,4 @@
+
 [profile]: https://github.com/AndreAugustoAAQ
 [chocolatey]: https://chocolatey.org/
 [kdeconnect]: https://invent.kde.org/network/kdeconnect-kde
@@ -12,13 +13,12 @@
 
 # <img src="chocolatey.svg" width="50px" /> Chocolatey Packages
 
-Este repositório possui o código fonte dos pacotes nuget para [Chocolatey][chocolatey] feitos por [mim][profile].  
-This repository has the source code of the nuget packages for [Chocolatey][chocolatey] made by [me][profile].
+This repository has the source code of nuget packages for [Chocolatey][chocolatey] made by [me][profile].
 
-## Pacotes disponíveis | Available packages
+## Available packages
 
--   <img src="kdeconnect-kde/kdeconnect.png" width="24px" />[KDE Connect 1.4 (Windows x64)][kdeconnect]
--   <img src="photogimp/photogimp.png" width="24px" />[PhotoGIMP 1.0.2020][photogimp]
--   <img src="ffmpeg-shared/ffmpeg.svg" width="24px" />[ffmpeg 4.3.2][ffmpeg]
--   <img src="gimp-data-extras/gimp.svg" width="24px" />[gimp-data-extras 2.0.4][gimp-data-extras]
--   <img src="adobeshockwaveplayer/adobeshockwaveplayer.svg" width="24px"/>[Adobe Shockwave Player 12.3 (EOL)][adobeshockwaveplayer]
+- <img src="kdeconnect-kde/kdeconnect.png" width="24px" /> [KDE Connect][kdeconnect]
+- <img src="photogimp/photogimp.png" width="24px" /> [PhotoGIMP][photogimp]
+- <img src="ffmpeg-shared/ffmpeg.svg" width="24px" /> [ffmpeg][ffmpeg]
+- <img src="gimp-data-extras/gimp.svg" width="24px" /> [gimp-data-extras][gimp-data-extras]
+- <img src="adobeshockwaveplayer/adobeshockwaveplayer.svg" width="24px"/> [Adobe Shockwave Player 12.3 (EOL)][adobeshockwaveplayer]

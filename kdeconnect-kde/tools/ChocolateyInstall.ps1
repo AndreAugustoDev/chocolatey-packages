@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64	= 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/507/artifact/kdeconnect-kde-1.4-507-windows-msvc2019_64-cl.exe'
+$url64	= 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-22.12.0-1189-windows-cl-msvc2019-x86_64.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
   url     		= $url64
   softwareName  = 'kdeconnect*'
-  checksum64	= '8f68566ed7219ba5f2a69087f2d1e0cf386f93e3d39992c9aa8aa6d67e071d4b'
+  checksum64	= 'bc646e6048647f0da6818639b3bb14b8253aee954373d3e2d265e573cd89ea99'
   checksumType64= 'sha256'
   silentArgs    = '/S'
 }
