@@ -1,7 +1,6 @@
 Import-Module au
 
-$releases = 'https://invent.kde.org/network/kdeconnect-kde/-/tags'
-$artifacts64 = 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/'
+$metainfo = 'https://invent.kde.org/network/kdeconnect-kde/-/raw/master/data/org.kde.kdeconnect.metainfo.xml'
 
 function global:au_BeforeUpdate() {
     $wc = [System.Net.WebClient]::new()
@@ -19,16 +18,20 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-	$download_page     = Invoke-WebRequest -Uri $releases -UseBasicParsing
-	$artifacts64_page  = Invoke-WebRequest $artifacts64 -UseBasicParsing
-	$url64             = $download_page.links | ? href -match '.zip$' | select -First 1 -expand href
-	$kdeversion        = ($url64 -split '/|.zip' | select -Last 1 -Skip 1).Replace('v','')
-	$version           = ($artifacts64_page.links | ? href -match '.exe$' | select -First 1 -expand href) -split '-' | select -First 1 -Skip 2
-	$build64           = ($artifacts64_page.links | ? href -match '.exe$' | select -First 1 -expand href) -split '-' | select -First 1 -Skip 3
+	$metainfo_content  = Invoke-WebRequest -Uri $metainfo -UseBasicParsing
+	$releases = Select-Xml -XPath '//release' -Content $metainfo_content
+	foreach ($release in $releases) {
+		if (!$release.Node.artifacts) {
+			continue
+		}
+		$version = $release.Node.version
+		$url64   = $release.Node.artifacts.artifact.location
+		break
+	}
 
     return @{
-		URL64        	= 'https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-' + $version + '-' + $build64 + '-windows-cl-msvc2019-x86_64.exe';
-        Version      	= $version + '.' + $build64;
+		URL64        	= $url64;
+        Version      	= $version;
     }
 }
 
