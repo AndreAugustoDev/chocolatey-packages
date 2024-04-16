@@ -1,7 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
+$toolsPath              = Split-Path $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'ffmpeg*'
 }
 
-Remove-Item -Recurse -Force -Path "$env:PROGRAMFILES\FFmpeg"
+Remove-Item -Recurse -Force -Path "$toolsPath"
