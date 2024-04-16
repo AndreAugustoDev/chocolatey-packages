@@ -1,8 +1,9 @@
 $ErrorActionPreference = 'Stop';
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'KDE Connect*'
-  fileType      = 'EXE'
+  softwareName  = 'kdeconnect*'
+  fileType      = 'exe'
   silentArgs   = '/S'
 }
 

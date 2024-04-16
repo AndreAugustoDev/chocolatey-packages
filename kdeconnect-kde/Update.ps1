@@ -1,11 +1,11 @@
-Import-Module au
+Import-Module chocolatey-au
 
 $metainfo = 'https://invent.kde.org/network/kdeconnect-kde/-/raw/master/data/org.kde.kdeconnect.metainfo.xml'
 
 function global:au_BeforeUpdate() {
-    $wc = [System.Net.WebClient]::new()
-    $RemoteFileHash = Get-FileHash -InputStream ($wc.OpenRead($Latest.URL64))
-    $Latest.Checksum64 = $RemoteFileHash.hash
+    # $wc = [System.Net.WebClient]::new()
+    # $RemoteFileHash = Get-FileHash -InputStream ($wc.OpenRead($Latest.URL64))
+    # $Latest.Checksum64 = $RemoteFileHash.hash
   }
 
 function global:au_SearchReplace {
@@ -24,19 +24,21 @@ function global:au_GetLatest {
 		if (!$release.Node.artifacts) {
 			continue
 		}
-		$version = $release.Node.version
-		$url64   = $release.Node.artifacts.artifact.location
+		$version    = $release.Node.version
+		$url64      = $release.Node.artifacts.artifact.location
+        $checksum64 = $release.Node.artifacts.artifact.checksum
 		break
 	}
 
     return @{
 		URL64        	= $url64;
         Version      	= $version;
+        Checksum64   	= $checksum64;
     }
 }
 
 try {
-    update -ChecksumFor 64
+    update -ChecksumFor none
 } catch {
     $ignore = 'Not Found'
    if ($_ -match $ignore) { Write-Host $ignore; 'ignore' }  else { throw $_ }

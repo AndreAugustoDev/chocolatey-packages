@@ -1,15 +1,17 @@
-﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64	= 'https://download.kde.org/stable/release-service/23.04.0/windows/kdeconnect-kde-23.04.0-1322-windows-cl-msvc2019-x86_64.exe'
+﻿$ErrorActionPreference  = 'Stop';
+$toolsDir               = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url64	                = 'https://download.kde.org/stable/release-service/24.02.0/windows/kdeconnect-kde-release_24.02-3692-windows-cl-msvc2022-x86_64.exe'
 
 $packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  fileType      = 'exe'
-  url64     		= $url64
-  softwareName  = 'kdeconnect*'
-  checksum64	= 'B32A83AC7F89F284C2330B5DD01F430294D1ADB201AB5C0F11AAE19F29866EAE'
-  checksumType64= 'sha256'
-  silentArgs    = '/S'
+  packageName     = $env:ChocolateyPackageName
+  fileType        = 'exe'
+  url64     		  = $url64
+  softwareName    = 'kdeconnect*'
+  checksum64	    = '8f7eb541bbe21a5fb1800d5f362fe1ea25328631894c30e937bd4bc259327ebd'
+  checksumType64  = 'sha256'
+
+  silentArgs      = '/S'
+  validExitCodes  = @(0)
 }
 
 Install-ChocolateyPackage @packageArgs

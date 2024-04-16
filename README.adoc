@@ -1,0 +1,28 @@
+:logo-kdeconnect-kde: https://invent.kde.org/network/kdeconnect-kde/-/raw/master/icons/app/32-apps-kdeconnect.png[KDEConnect] KDE Connect
+:logo-photogimp: https://raw.githubusercontent.com/Diolinux/PhotoGIMP/master/.local/share/icons/hicolor/32x32/apps/photogimp.png[PhotoGIMP] PhotoGIMP
+:logo-ffmpeg: https://www.movieconverter-studio.com/_PUBLIC/ffmpeg/logo-new/ffmpeg-logo-src/ffmpeg-logo.svg[FFmpeg,32] FFmpeg (shared)
+:logo-gimp-data-extras: https://gitlab.gnome.org/GNOME/gimp-data/-/raw/main/images/logo/gimp-logo.svg[GIMPDataExtras,32]
+:logo-chocolatey: https://chocolatey.org/assets/images/global-shared/logo-square.svg[Chocolatey,256]
+
+:chocolatey-url: https://chocolatey.org/[Chocolatey]
+
+= 🍫 Chocolatey Packages
+
+[.text-center]
+image:{logo-chocolatey}
+
+Source code of packages for {chocolatey-url}.
+
+== 📦 Available packages
+  - image:{logo-kdeconnect-kde} KDE Connect
+  - image:{logo-photogimp} PhotoGIMP
+  - image:{logo-ffmpeg} FFmpeg (shared)
+  - image:{logo-gimp-data-extras} GIMP Data Extras
+
+== 📝 Contributing
+If you have found a bug or have a suggestion, please feel free to raise an issue.
+
+Pull requests are also most welcome!
+
+== 📜 License
+Licensed under the MIT License
