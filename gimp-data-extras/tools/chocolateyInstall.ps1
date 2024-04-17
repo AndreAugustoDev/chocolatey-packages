@@ -1,8 +1,6 @@
-
 $ErrorActionPreference = 'Stop';
-$toolsDir   	= "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url 			= 'https://ftp.gimp.org/pub/gimp/extras/gimp-data-extras-2.0.4.tar.bz2'
-$GIMPdata   	= "$env:APPDATA\GIMP"
+$url 			             = 'https://ftp.gimp.org/pub/gimp/extras/gimp-data-extras-2.0.4.tar.bz2'
+$GIMPdata   	         = "$env:APPDATA\GIMP"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -14,11 +12,14 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs | Out-Null
+
 Get-ChocolateyUnzip "$GIMPdata\gimp-data-extras-2.0.4.tar" "$GIMPdata" | Out-Null
-Get-ChildItem "$GIMPdata\gimp-data-extras-2.0.4\Makefile*" -Recurse | ForEach { Remove-Item -Path $_.FullName }
-Get-ChildItem "$GIMPdata\gimp-data-extras-2.0.4\*" -File | ForEach { Remove-Item -Path $_.FullName }
+Get-ChildItem "$GIMPdata\gimp-data-extras-2.0.4\Makefile*" -Recurse | ForEach-Object { Remove-Item -Path $_.FullName }
+Get-ChildItem "$GIMPdata\gimp-data-extras-2.0.4\*" -File | ForEach-Object { Remove-Item -Path $_.FullName }
+
 If(!(Test-Path "$GIMPdata\2.10")){
 	New-Item -Path "$GIMPdata\2.10" -ItemType Directory | Out-Null
 }
+
 Copy-Item -Path "$GIMPdata\gimp-data-extras-2.0.4\*" -Destination "$GIMPdata\2.10" -Recurse -Force -PassThru | Out-Null
 Remove-Item -Path "$GIMPdata\gimp-data-extras*" -Recurse -Force | Out-Null

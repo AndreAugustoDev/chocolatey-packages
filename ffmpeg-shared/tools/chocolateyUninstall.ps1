@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsPath              = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath              = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName

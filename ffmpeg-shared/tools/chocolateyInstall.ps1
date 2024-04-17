@@ -1,6 +1,5 @@
 ﻿$ErrorActionPreference  = 'Stop';
-$toolsPath              = Split-Path $MyInvocation.MyCommand.Definition
-$version	              = '7.0'
+$toolsPath              = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url                    = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z'
 
 $packageArgs = @{
