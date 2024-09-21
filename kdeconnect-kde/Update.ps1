@@ -25,8 +25,8 @@ function global:au_GetLatest {
 			continue
 		}
 		$version    = $release.Node.version
-		$url64      = $release.Node.artifacts.artifact.location
-        $checksum64 = $release.Node.artifacts.artifact.checksum
+		$url64      = $release.Node.SelectSingleNode('artifacts/artifact/location').InnerText
+        $checksum64 = $release.Node.SelectSingleNode('artifacts/artifact/checksum').InnerText
 		break
 	}
 
