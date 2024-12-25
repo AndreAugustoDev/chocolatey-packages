@@ -5,12 +5,10 @@ $packageArgs = @{
   silentArgs   = '/S'
 }
 
-$uninstalled = $false
-
 [array]$key = Get-UninstallRegistryKey @packageArgs
 
 if ($key.Count -eq 1) {
-  $key | % {
+  $key | ForEach-Object {
     $packageArgs['file'] = "$($_.UninstallString)"
     
     if ($packageArgs['fileType'] -eq 'MSI') {
@@ -29,5 +27,5 @@ elseif ($key.Count -gt 1) {
   Write-Warning "$($key.Count) matches found!"
   Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
   Write-Warning "Please alert the package maintainer that the following keys were matched:"
-  $key | % { Write-Warning "- $($_.DisplayName)" }
+  $key | ForEach-Object { Write-Warning "- $($_.DisplayName)" }
 }

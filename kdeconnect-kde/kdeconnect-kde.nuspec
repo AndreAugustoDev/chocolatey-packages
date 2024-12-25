@@ -16,8 +16,8 @@
     <docsUrl>https://community.kde.org/KDEConnect</docsUrl>
     <bugTrackerUrl>https://bugs.kde.org/buglist.cgi?product=kdeconnect</bugTrackerUrl>
     <tags>kde kdeconnect windows communications tools</tags>
-	<releaseNotes>https://kde.org/announcements/changelogs/gear/24.02.2/#kdeconnect-kde</releaseNotes>
-	<summary>KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).</summary>
+    <releaseNotes>https://kde.org/announcements/changelogs/gear/24.02.2/#kdeconnect-kde</releaseNotes>
+    <summary>KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).</summary>
     <description><![CDATA[KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).
 
 ## (Some) Features
@@ -49,8 +49,8 @@ Please know that all translations for all KDE apps are handled by the [localizat
 
 If you are reading this from Github, you should know that this is just a mirror of the [KDE Project repo](https://invent.kde.org/network/kdeconnect-kde).
 ]]></description>
-    </metadata>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    </files>
+  </files>
 </package>

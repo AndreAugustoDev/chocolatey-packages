@@ -1,7 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip'
-$GIMPdata   = "$env:APPDATA\GIMP"
+$url = 'https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip'
+$GIMPdata = "$env:APPDATA\GIMP"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -14,6 +13,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-md -Force "$GIMPdata\2.10" | Out-Null
+New-Item -Path "$GIMPdata\2.10" -Force | Out-Null
 Copy-Item  -Recurse -Force -Path "$GIMPdata\PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak\.var\app\org.gimp.GIMP\config\GIMP\2.10\*" -Destination "$GIMPdata\2.10" | Out-Null
 Remove-Item -Recurse -Force -Path "$GIMPdata\PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak"
