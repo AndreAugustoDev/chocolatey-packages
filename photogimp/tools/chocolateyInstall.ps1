@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip'
+$url = 'https://github.com/Diolinux/PhotoGIMP/releases/download/3.0/PhotoGIMP.zip'
 $GIMPdata = "$env:APPDATA\GIMP"
 
 $packageArgs = @{
@@ -7,12 +7,12 @@ $packageArgs = @{
   unzipLocation  = "$env:APPDATA\GIMP"
   url            = $url
   softwareName   = 'PhotoGIMP'
-  checksum       = 'cae2739dc54ea90baec832f4ad60d8d5cc2dd1533f06acc91e95318f6f205e3b'
+  checksum       = '3CDC73D36851923B25E55388ECD400AE9A987C7D4F5D882E48F857EE8044DDF6'
   checksumType   = 'sha256'
-  SpecificFolder = "PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak\.var\app\org.gimp.GIMP\config\GIMP\"
+  SpecificFolder = "3.0"
 }
 
 Install-ChocolateyZipPackage @packageArgs
-New-Item -Path "$GIMPdata\2.10" -Force | Out-Null
-Copy-Item  -Recurse -Force -Path "$GIMPdata\PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak\.var\app\org.gimp.GIMP\config\GIMP\2.10\*" -Destination "$GIMPdata\2.10" | Out-Null
-Remove-Item -Recurse -Force -Path "$GIMPdata\PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak"
+New-Item -Path "$GIMPdata\3.0" -Force | Out-Null
+Copy-Item  -Recurse -Force -Path "$GIMPdata\*" -Destination "$GIMPdata\3.0" | Out-Null
+Remove-Item -Recurse -Force -Path "$GIMPdata"
