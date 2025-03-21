@@ -17,7 +17,7 @@
     <licenseUrl>https://github.com/Diolinux/PhotoGIMP?tab=GPL-3.0-1-ov-file#readme</licenseUrl>
     <tags>photogimp gimp design publishing editor images graphics photo art png jpg gif admin foss cross-platform photoshop adobe</tags>
     <summary>A patch for optimizing GIMP 3.0+ for Adobe Photoshop users.</summary>
-    <description><![CDATA[![](https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/.config/GIMP/3.0/splashes/splash-screen-2025-v2.png)
+    <description><![CDATA[
 # 🎨 PhotoGIMP
 
 A patch for optimizing GIMP 3.0+ for Adobe Photoshop users, including features like:
