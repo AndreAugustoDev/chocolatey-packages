@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>photogimp</id>
     <version>3.0</version>
-    <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/photogimp</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AndreAugustoDev/chocolatey-packages/tree/main/photogimp</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>PhotoGIMP</title>
     <authors>Diolinux</authors>
     <projectUrl>https://github.com/Diolinux/PhotoGIMP</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Diolinux/PhotoGIMP/master/.local/share/icons/hicolor/photogimp.png</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/.local/share/icons/hicolor/photogimp.png</iconUrl>
     <projectSourceUrl>https://github.com/Diolinux/PhotoGIMP/tree/master</projectSourceUrl>
-    <docsUrl>https://github.com/Diolinux/PhotoGIMP/blob/master/README.md</docsUrl>
+    <docsUrl>https://github.com/Diolinux/PhotoGIMP</docsUrl>
     <bugTrackerUrl>https://github.com/Diolinux/PhotoGIMP/issues</bugTrackerUrl>
-    <licenseUrl>https://github.com/Diolinux/PhotoGIMP/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/Diolinux/PhotoGIMP?tab=GPL-3.0-1-ov-file#readme</licenseUrl>
     <tags>photogimp gimp design publishing editor images graphics photo art png jpg gif admin foss cross-platform photoshop adobe</tags>
     <summary>A patch for optimizing GIMP 3.0+ for Adobe Photoshop users.</summary>
-    <description><![CDATA[![](https://raw.githubusercontent.com/Diolinux/PhotoGIMP/refs/heads/master/.config/GIMP/3.0/splashes/splash-screen-2025-v2.png)
+    <description><![CDATA[![](https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/.config/GIMP/3.0/splashes/splash-screen-2025-v2.png)
 # 🎨 PhotoGIMP
-
-<img src="https://raw.githubusercontent.com/Diolinux/PhotoGIMP/refs/heads/master/.local/share/icons/hicolor/256x256/256x256.png" align="right" alt="PhotoGimp application icon" title="PhotoGimp application icon">
 
 A patch for optimizing GIMP 3.0+ for Adobe Photoshop users, including features like:
 
@@ -29,16 +29,9 @@ A patch for optimizing GIMP 3.0+ for Adobe Photoshop users, including features l
 * New icon and Name from custom .desktop file.
 
 ## 📷 Screenshots
+  ![](https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/.config/GIMP/3.0/splashes/splash-screen-2025-v2.png)
 
-<p>
-  <img src="https://raw.githubusercontent.com/Diolinux/PhotoGIMP/refs/heads/master/.config/GIMP/3.0/splashes/splash-screen-2025-v2.png" alt="PhotoGIMP Diolinux Splash Art">
-  <em>PhotoGIMP Diolinux Splash Art</em>
-</p>
-
-<p>
-  <img src="https://raw.githubusercontent.com/Diolinux/PhotoGIMP/refs/heads/master/screenshots/photogimp_3_-_diolinux.png" alt="PhotoGIMP 3">
-  <em>GIMP 3.0 with the PhotoGIMP patch applied</em>
-</p>
+  ![](https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/screenshots/photogimp_3_-_diolinux.png)
 
 ## Credits
 

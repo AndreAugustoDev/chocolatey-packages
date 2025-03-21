@@ -1,5 +1,5 @@
 :logo-kdeconnect-kde: https://invent.kde.org/network/kdeconnect-kde/-/raw/master/icons/app/32-apps-kdeconnect.png[KDEConnect] KDE Connect
-:logo-photogimp: https://raw.githubusercontent.com/Diolinux/PhotoGIMP/master/.local/share/icons/hicolor/32x32/apps/photogimp.png[PhotoGIMP] PhotoGIMP
+:logo-photogimp: https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/.local/share/icons/hicolor/photogimp.png[PhotoGIMP,32] PhotoGIMP
 :logo-ffmpeg: https://www.movieconverter-studio.com/_PUBLIC/ffmpeg/logo-new/ffmpeg-logo-src/ffmpeg-logo.svg[FFmpeg,32] FFmpeg (shared)
 :logo-gimp-data-extras: https://gitlab.gnome.org/GNOME/gimp-data/-/raw/main/images/logo/gimp-logo.svg[GIMPDataExtras,32] GIMP Data Extras
 :logo-chocolatey: https://chocolatey.org/assets/images/global-shared/logo-square.svg[Chocolatey,256]
