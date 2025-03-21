@@ -10,7 +10,7 @@
     <title>PhotoGIMP</title>
     <authors>Diolinux</authors>
     <projectUrl>https://github.com/Diolinux/PhotoGIMP</projectUrl>
-    <iconUrl>https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/.local/share/icons/hicolor/photogimp.png</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/Diolinux/PhotoGIMP@master/.local/share/icons/hicolor/128x128/apps/photogimp.png</iconUrl>
     <projectSourceUrl>https://github.com/Diolinux/PhotoGIMP/tree/master</projectSourceUrl>
     <docsUrl>https://github.com/Diolinux/PhotoGIMP</docsUrl>
     <bugTrackerUrl>https://github.com/Diolinux/PhotoGIMP/issues</bugTrackerUrl>
