@@ -1,14 +1,13 @@
 Import-Module chocolatey-au
 
-$release = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z.ver'
-$checksum = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z.sha256'
-$url = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z'
+$releaseVersionUrl = 'https://www.gyan.dev/ffmpeg/builds/release-version'
+$urlBase = 'https://www.gyan.dev/ffmpeg/builds/packages'
 
 function global:au_GetLatest {
-  $get_version = Invoke-WebRequest -Uri "$release" -UseBasicParsing -Header @{ Referer = $release }
-  $get_sha256 = Invoke-WebRequest -Uri "$checksum" -UseBasicParsing -Header @{ Referer = $checksum }
-  $version = $get_version.ToString()
-  $sha256 = $get_sha256.ToString()
+  $version = (Invoke-WebRequest -Uri $releaseVersionUrl -UseBasicParsing).Content.Trim()
+  $url = "$urlBase/ffmpeg-$version-full_build-shared.7z"
+  $checksumUrl = "$urlBase/ffmpeg-$version-full_build-shared.7z.sha256"
+  $sha256 = ((Invoke-WebRequest -Uri $checksumUrl -UseBasicParsing).Content -split '\s+')[0]
   @{
     URL          = $url
     Version      = $version
