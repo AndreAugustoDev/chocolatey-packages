@@ -19,40 +19,12 @@ jobs:
       DOTNET_MULTILEVEL_LOOKUP: 0
       DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: true
       TERM: xterm
-      NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
-      Configuration: Release
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          repository: "flcdrg/au-dotnet"
-          path: "autoupdate"
-          persist-credentials: false
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.200
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ${{ github.workspace }}/.nuget/packages
-          key: ${{ runner.os }}-dotnet-${{ hashFiles('autoupdate/AutoUpdate/*.csproj') }}
-          restore-keys: |
-            ${{ runner.os }}-dotnet-
-
-      - name: Restore
-        run: dotnet restore
-        working-directory: autoupdate
-
-      - name: Build
-        run: dotnet build --no-restore
-        working-directory: autoupdate
-
-      - name: Test
-        run: dotnet test
-        working-directory: autoupdate
-
-      - uses: actions/checkout@v4
+      # Install a customised version of Chocolatey-AU PowerShell module
+      # If my PR (https://github.com/chocolatey-community/chocolatey-au/pull/53) ever gets merged,
+      # then we can revert back to use the official module
+      - uses: actions/checkout@v7
         with:
           repository: "flcdrg/chocolatey-au"
           path: "chocolatey-au"
@@ -61,6 +33,9 @@ jobs:
 
       - name: Install
         run: |
+          $ErrorActionPreference = "Stop"
+          $PSNativeCommandUseErrorActionPreference = $true
+
           $module_name = 'Chocolatey-AU'
 
           $module_dst  = "$Env:ProgramFiles\PowerShell\Modules\$module_name"
@@ -75,27 +50,37 @@ jobs:
         shell: pwsh
         working-directory: chocolatey-au
 
-      - uses: actions/checkout@v4
+      - name: Enable Git symlinks
+        run: git config --global core.symlinks true
+        shell: pwsh
+
+      - uses: actions/checkout@v7
         with:
           path: "packages"
 
       - name: Configure Git
         run: |
-          git config --global user.email ($context.repository_owner + '+github@gmail.com')
-          git config --global user.name $context.repository_owner
+          git config --global user.email "${{ github.repository_owner }}+github@gmail.com"
+          git config --global user.name "${{ github.repository_owner }}"
           git config --global core.safecrlf false
         working-directory: packages
 
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: "10.0.x"
+
       - name: Run update check
         run: |
-          dotnet run
+          dnx --yes flcdrg.au
         working-directory: autoupdate/AutoUpdate
         env:
           PACKAGES_REPO: "${{ github.workspace }}\\packages"
-          github_api_key: ${{ secrets.GH_TOKEN }} # GitHub API Key
+          github_api_key: ${{ github.token }} # GitHub Actions token
           api_key: ${{ secrets.CHOCO_TOKEN }} # Chocolatey API Key
           VT_APIKEY: ${{ secrets.VT_APIKEY }} # VirusTotal API Key
           GIST_ID: ${{ secrets.GIST_ID }} # Gist ID
+        continue-on-error: true
 
       - name: Status
         run: |
