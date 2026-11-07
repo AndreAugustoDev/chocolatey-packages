@@ -1,6 +1,6 @@
 Import-Module chocolatey-au
 
-$metainfo = 'https://invent.kde.org/network/kdeconnect-kde/-/raw/master/data/org.kde.kdeconnect.metainfo.xml'
+$metainfo = 'https://raw.githubusercontent.com/KDE/kdeconnect-kde/refs/heads/master/data/org.kde.kdeconnect.metainfo.xml'
 
 function global:au_BeforeUpdate() {
     # $wc = [System.Net.WebClient]::new()
@@ -18,23 +18,23 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $metainfo_content = Invoke-WebRequest -Uri $metainfo -UseBasicParsing
-    $releases = Select-Xml -XPath '//release' -Content $metainfo_content
+    $content = (Invoke-WebRequest -Uri $metainfo -UseBasicParsing).Content
+    $releases = Select-Xml -XPath '//release' -Content $content
+
     foreach ($release in $releases) {
-        if (!$release.Node.artifacts) {
+        $artifact = $release.Node.SelectSingleNode("artifacts/artifact[@type='binary' and contains(@platform,'windows')]")
+        if (-not $artifact) {
             continue
         }
-        $version = $release.Node.version
-        $url64 = $release.Node.SelectSingleNode('artifacts/artifact/location').InnerText
-        $checksum64 = $release.Node.SelectSingleNode('artifacts/artifact/checksum').InnerText
-        break
+
+        return @{
+            Version    = $release.Node.version;
+            URL64      = $artifact.SelectSingleNode('location').InnerText;
+            Checksum64 = $artifact.SelectSingleNode('checksum').InnerText;
+        }
     }
 
-    return @{
-        URL64      = $url64;
-        Version    = $version;
-        Checksum64 = $checksum64;
-    }
+    throw "No release with a Windows artifact found in $metainfo"
 }
 
 try {
