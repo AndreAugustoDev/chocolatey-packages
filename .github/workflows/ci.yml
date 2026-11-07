@@ -73,14 +73,13 @@ jobs:
       - name: Run update check
         run: |
           dnx --yes flcdrg.au
-        working-directory: autoupdate/AutoUpdate
+        working-directory: packages
         env:
           PACKAGES_REPO: "${{ github.workspace }}\\packages"
           github_api_key: ${{ github.token }} # GitHub Actions token
           api_key: ${{ secrets.CHOCO_TOKEN }} # Chocolatey API Key
           VT_APIKEY: ${{ secrets.VT_APIKEY }} # VirusTotal API Key
           GIST_ID: ${{ secrets.GIST_ID }} # Gist ID
-        continue-on-error: true
 
       - name: Status
         run: |

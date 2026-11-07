@@ -3,7 +3,7 @@
   <metadata>
     <id>kdeconnect-kde</id>
     <version>24.02.0</version>
-    <packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/kdeconnect-kde</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AndreAugustoDev/chocolatey-packages/tree/main/kdeconnect-kde</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>KDE Connect</title>
     <authors>KDE e.V.</authors>

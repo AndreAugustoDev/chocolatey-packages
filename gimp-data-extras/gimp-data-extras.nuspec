@@ -4,7 +4,7 @@
 	<metadata>
 		<id>gimp-data-extras</id>
 		<version>2.0.4</version>
-		<packageSourceUrl>https://github.com/AndreAugustoAAQ/chocolatey-packages/tree/main/gimp-data-extras</packageSourceUrl>
+		<packageSourceUrl>https://github.com/AndreAugustoDev/chocolatey-packages/tree/main/gimp-data-extras</packageSourceUrl>
 		<owners>André Augusto</owners>
 		<title>GIMP data extras</title>
 		<authors>The GIMP Team</authors>

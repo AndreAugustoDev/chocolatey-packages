@@ -14,4 +14,4 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Write-Host "$packageName installed to $toolsPath"
+Write-Host "$($env:ChocolateyPackageName) installed to $toolsPath"
