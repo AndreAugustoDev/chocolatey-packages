@@ -45,7 +45,7 @@ function global:au_GetLatest {
 }
 
 try {
-    update -ChecksumFor none
+    update -ChecksumFor none -NoReadme
 }
 catch {
     $ignore = 'Not Found'
