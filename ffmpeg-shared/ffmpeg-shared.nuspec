@@ -4,7 +4,7 @@ editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ffmpeg-shared</id>
-    <version>7.0.0.20240416</version>
+    <version>9.0.2</version>
     <title>FFmpeg</title>
     <owners>André Augusto</owners>
     <authors>FFmpeg Contributors</authors>

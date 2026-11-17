@@ -2,12 +2,6 @@ Import-Module chocolatey-au
 
 $metainfo = 'https://raw.githubusercontent.com/KDE/kdeconnect-kde/refs/heads/master/data/org.kde.kdeconnect.metainfo.xml'
 
-function global:au_BeforeUpdate() {
-    # $wc = [System.Net.WebClient]::new()
-    # $RemoteFileHash = Get-FileHash -InputStream ($wc.OpenRead($Latest.URL64))
-    # $Latest.Checksum64 = $RemoteFileHash.hash
-}
-
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{

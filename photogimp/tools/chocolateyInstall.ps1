@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://github.com/Diolinux/PhotoGIMP/releases/download/3.0/PhotoGIMP.zip'
+$url = 'https://github.com/Diolinux/PhotoGIMP/releases/download/3.1/PhotoGIMP.zip'
 $GIMPdata = "$env:APPDATA\GIMP"
 
 $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
   url          = $url
-  checksum     = '3CDC73D36851923B25E55388ECD400AE9A987C7D4F5D882E48F857EE8044DDF6'
+  checksum     = 'de6a17ffb70000051372d84141b7e69fc2e60a0af3bd3b3100c9afd5e0ff3ae6'
   checksumType = 'sha256'
 }
 

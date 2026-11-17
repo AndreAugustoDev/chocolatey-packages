@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>photogimp</id>
-    <version>3.0</version>
+    <version>3.1</version>
     <packageSourceUrl>https://github.com/AndreAugustoDev/chocolatey-packages/tree/main/photogimp</packageSourceUrl>
     <owners>André Augusto</owners>
     <title>PhotoGIMP</title>
@@ -39,7 +39,7 @@ A patch for optimizing GIMP 3.0+ for Adobe Photoshop users, including features l
 * A BIG thanks to all Diolinux's supporters on [YouTube](https://youtube.com/Diolinux).
 * Splash screen & icons from [Adriel Filipe Design](https://bento.me/adrielfilipedesign)
 ]]></description>
-    <releaseNotes>https://github.com/Diolinux/PhotoGIMP/releases</releaseNotes>
+    <releaseNotes>https://github.com/Diolinux/PhotoGIMP/releases/tag/3.1</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,14 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z'
-$checksum = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z.sha256'
-$get_sha256 = (Invoke-WebRequest -Uri "$checksum" -UseBasicParsing -Header @{ Referer = $checksum }).ToString()
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsPath
   url           = $url
-  checksum      = $get_sha256
+  checksum      = '4d2060a8b34a940aa47d785142055bb92a63053781e55f2ace4546edd519a8f5'
   checksumType  = 'sha256'
 }
 
